@@ -1,0 +1,18 @@
+{
+  "bikes": [
+    {
+      "name": "kjkj",
+      "cost": "898",
+      "date": "2023-11-13T23:06:58.470Z",
+      "option": "Select from the Drop down Menu",
+      "id": 1
+    },
+    {
+      "name": "Splender",
+      "cost": "240",
+      "date": "2023-11-13T23:23:20.175Z",
+      "option": "Hero MotoCorp",
+      "id": 2
+    }
+  ]
+}
