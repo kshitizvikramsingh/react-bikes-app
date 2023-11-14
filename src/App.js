@@ -8,7 +8,7 @@ import axios from "axios"
 function App (){
     const [bikeEntry,setBikeEntry]=useState([])
     const handleCreateEntry=async(name,cost,date,option)=>{
-        const response=await axios.post("http://localhost:3001/bikes",{
+        const response=await axios.post("http://localhost/bikes",{
             name,cost,date,option
         })
         const updated=[...bikeEntry, response.data]
@@ -16,7 +16,7 @@ function App (){
         setBikeEntry(updated)
     }
 const fetchBikes=async()=>{
-    const response =await axios.get("http://localhost:3001/bikes")
+    const response =await axios.get("http://localhost/bikes")
     setBikeEntry(response.data) 
 }
 useEffect(()=>{

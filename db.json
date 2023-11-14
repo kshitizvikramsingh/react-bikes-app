@@ -13,6 +13,20 @@
       "date": "2023-11-13T23:23:20.175Z",
       "option": "Hero MotoCorp",
       "id": 2
+    },
+    {
+      "name": "Passion",
+      "cost": "250",
+      "date": "2023-11-14T09:09:02.281Z",
+      "option": "Hero MotoCorp",
+      "id": 3
+    },
+    {
+      "name": "Passion",
+      "cost": "850",
+      "date": "2023-11-14T09:09:02.281Z",
+      "option": "TVS",
+      "id": 4
     }
   ]
 }
