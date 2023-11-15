@@ -53,7 +53,7 @@ function CreateBikeEntry ({createEntry}) {
             <option value="TVS">TVS</option>
             <option value="Royal Enfield">Royal Enfield</option>
             <option value="Bajaj">Bajaj</option>
-            <option value="Honda">HOnda</option>
+            <option value="Honda">Honda</option>
         </select>
         </div>
         
