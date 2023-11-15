@@ -13,7 +13,7 @@ else if (bike.bike.option ==="Bajaj"){
     srce="https://1000logos.net/wp-content/uploads/2020/06/Bajaj-Logo.png"
 }
 else if (bike.bike.option ==="Honda"){
-    srce="https://upload.wikimedia.org/wikipedia/commons/7/7b/Honda_Logo.svg"
+    srce="https://i.pinimg.com/750x/6e/e6/ae/6ee6ae2bf0291df84fbec685cd296fb8.jpg"
 }
    console.log(bike)
   
