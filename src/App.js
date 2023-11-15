@@ -8,7 +8,7 @@ import axios from "axios"
 function App (){
     const [bikeEntry,setBikeEntry]=useState([])
     const handleCreateEntry=async(name,cost,date,option)=>{
-        const response=await axios.post("http://localhost/bikes",{
+        const response=await axios.post("http://52.201.239.183/bikes",{
             name,cost,date,option
         })
         const updated=[...bikeEntry, response.data]
@@ -16,8 +16,13 @@ function App (){
         setBikeEntry(updated)
     }
 const fetchBikes=async()=>{
-    const response =await axios.get("http://localhost/bikes")
+    let sum=0
+    const response =await axios.get("http://52.201.239.183/bikes")
     setBikeEntry(response.data) 
+    for(let i=0;i<response.data.length;i++){
+        sum=sum+parseInt(response.data[i].cost)
+    }
+    console.log("   Sum is="+sum)
 }
 useEffect(()=>{
     fetchBikes()
@@ -26,7 +31,7 @@ useEffect(()=>{
         <Nav/>
         <h1 style={{textAlign:"center"}}>Daily Bike Entry ({bikeEntry.length})</h1>
         <CreateBikeEntry createEntry={handleCreateEntry}/>
-        <ShowBikeEntry bikeEntry={bikeEntry}/>
+        <ShowBikeEntry bikeEntry={bikeEntry} />
     </div>
 }
 

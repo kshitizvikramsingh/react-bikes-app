@@ -8,16 +8,16 @@ function CreateBikeEntry ({createEntry}) {
     const [startDate, setStartDate] = useState(new Date());
     const [option,setOption]=useState('Hero MotoCorp')
     const [Name,setName]=useState('')
-    const [Cost,setCost]=useState('')
+    const [Cost,setCost]=useState(0)
 
-    const handleChange=(date)=>{
-        console.log(date)
-        setStartDate(date)
+    const handleChange=(event)=>{
+        console.log(event)
+        setStartDate(event)
     }
     
     const handleSubmit=(event)=>{
         event.preventDefault()
-        createEntry(Name,Cost,startDate,option)
+        createEntry(Name,Cost,startDate.toLocaleString(),option)
 
     }
     const handleBikeNameChange=(event)=>{
@@ -53,12 +53,13 @@ function CreateBikeEntry ({createEntry}) {
             <option value="TVS">TVS</option>
             <option value="Royal Enfield">Royal Enfield</option>
             <option value="Bajaj">Bajaj</option>
+            <option value="Honda">HOnda</option>
         </select>
         </div>
         
         <div className="container">
         <label>Estimated Cost:</label>
-        <input  className="form-control" type="text" onChange={handleCostChange} value={Cost}/>
+        <input  className="form-control" type="number" onChange={handleCostChange} value={Cost}/>
         <button className="btn btn-primary">Create Entry</button>
         </div>
 

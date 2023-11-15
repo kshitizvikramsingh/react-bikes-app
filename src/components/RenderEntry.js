@@ -12,13 +12,17 @@ else if (bike.bike.option ==="Royal Enfield"){
 else if (bike.bike.option ==="Bajaj"){
     srce="https://1000logos.net/wp-content/uploads/2020/06/Bajaj-Logo.png"
 }
+else if (bike.bike.option ==="Honda"){
+    srce="https://upload.wikimedia.org/wikipedia/commons/7/7b/Honda_Logo.svg"
+}
    console.log(bike)
+  
     return <div className="container">
          <div className="card">
     <img src={srce} className="card-img-top" alt="..." style={{width:150+"px"}} />
     <div className="card-body">
       <h5 className="card-title">{bike.bike.name}</h5>
-      <p className="card-text"><b>₹</b>{bike.bike.cost} <b>Date:</b>{bike.bike.date}</p>
+      <p className="card-text"><b>₹</b>{bike.bike.cost} <b>Date:</b>{bike.bike.date.toLocaleString()}</p>
  
     </div>
   </div>
